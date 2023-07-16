@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FormWrapper } from './style.jsx';
+import { Link } from 'react-router-dom';
 
 function AddNewItem() {
 
@@ -25,7 +26,7 @@ function AddNewItem() {
           let updatedItems;
           const localItems = localStorage.getItem("to-do-items");
 
-          if(localItems){
+          if (localItems) {
                const parsedItems = JSON.parse(localItems);
                parsedItems.push({
                     todoTitle: title,
@@ -41,7 +42,7 @@ function AddNewItem() {
           }
 
           localStorage.setItem("to-do-items", updatedItems);
-          window.location.href = "/";
+          window.location.href = "/todo-app#";
      }
 
      return (
@@ -49,15 +50,15 @@ function AddNewItem() {
                <form onSubmit={AddingTask}>
                     <label className="lab p-f p-a" id='title-form'>
                          Title:
-                         <input 
-                              onChange={(e) => 
+                         <input
+                              onChange={(e) =>
                                    setTitle(e.target.value)
                               }
                               className="bd"
                               type="text"
                               maxLength="10"
                               autoFocus
-                              required/>
+                              required />
                          <span className="length title-length">{titleLength}/10</span>
                     </label>
                     <label className="lab p-f p-a" id='todo-form'>
@@ -67,14 +68,14 @@ function AddNewItem() {
                               className="bd"
                               required
                               maxLength="130"
-                              />
-                              <span className="length text-length">{textLength}/130</span>
+                         />
+                         <span className="length text-length">{textLength}/130</span>
                     </label>
-                    <a className="main-btn" type="button" href="/">
+                    <Link to="/#" className="main-btn" type="button">
                          <span className="border"></span>
                          <h3>cancel</h3>
                          <span className="cancel btn"></span>
-                    </a>
+                    </Link>
                     <button className='main-btn' type="submit">
                          <h3>Confirm</h3>
                          <span className="submit btn"></span>

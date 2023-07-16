@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { HomeWrapper } from "./style";
 import Item from "../item";
 import NoItems from '../add';
+import { Link } from 'react-router-dom';
 
 function Home() {
      var localTodoItems = JSON.parse(localStorage.getItem("to-do-items"));
@@ -39,7 +40,7 @@ function Home() {
           <HomeWrapper>
                <div id="title">
                     <h1>MY TO DO LIST</h1>
-                    <a href="add">+</a>
+                    <Link to="/add">+</Link>
                </div>
                <ul>
                     {MappingItems}

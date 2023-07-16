@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom';
 import { NoItemsWrapper } from './style.jsx';
 
 function NoItems() {
      return (
-          <NoItemsWrapper href="/add">
-               + Add new item
-          </NoItemsWrapper>
+          <Link to="/add">
+               <NoItemsWrapper href="">
+                    + Add new item
+               </NoItemsWrapper>
+          </Link>
      )
 }
 

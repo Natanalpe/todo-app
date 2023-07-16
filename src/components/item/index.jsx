@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ItemWrapper } from "./style";
 
 const Item = (props) => {

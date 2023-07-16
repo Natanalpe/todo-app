@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { HomeWrapper } from "./style";
 import Item from "../item";
 import NoItems from '../add';

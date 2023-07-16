@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import { backgroundLight } from '../../assets/exports';
 
 export const HomeWrapper = styled.main`
 

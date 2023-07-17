@@ -42,7 +42,8 @@ function AddNewItem() {
           }
 
           localStorage.setItem("to-do-items", updatedItems);
-          window.location.href = "/todo-app#";
+          //window.location.href = "https://natanalpe.github.io/todo-app#/";
+          window.history.back();
      }
 
      return (
